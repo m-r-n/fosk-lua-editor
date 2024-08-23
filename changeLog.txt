@@ -1,0 +1,98 @@
+============================================
+		F.O.S.K.
+	Lua-based PSP TEXT Input
+	  mrn at post dot cz
+============================================
+
+ToDo:
+-----
+
+ - new line hiba es hulyen is irja
+ - kottajelek 
+ - to slow down the processor if not really used
+ - Insert
+ - Shifting the text Left/Right if necessary
+ - Copy/Cut/Paste, Del in Blocks (Del requires 2 buttonpresses per char!! now.)
+ - memorize last dir, ie. ini file .)
+ - memorize the file name, ask for changes at save
+ - ? at starting to make a new file or to read one.
+ - check file overwriting if SaveAs
+ - check for "save changes" before Exit (Maybe move Exit as part of FOSK..)
+
+Known bugs:
+-----------
+
+-Back leaves a copy of the actual line when jumping a line up
+- sometimes when the cursor reach eof -> crash
+ 
+Last Changes:
+-------------
+
+ver. 0.24.. Dec.18, 2005
+ - analog joystick-based cursor movement added
+ - "Find" and "Del" BUG (damaged line from the prev cursor position!!) fixed!! (Del was ok in 0.20)..!!
+ - scroll X .. added
+ - dispAscii added to see what's available .)
+
+ver. 0.232.. Dec.16, 2005
+ - dispScrollY .. dynamic size
+ - dispAscii () .. to see what is available
+ - Esc/Enter added to the "Find/SaveAs" menu
+ - new chars added to the keyboard (<|>)
+ - checkLines () added which should fix the NewLine printing bug
+
+ver. 0.23.. Dec.13, 2005
+ - additional string input mode for SaveAs, Search, etc 
+ - SaveAs part of Save .. works
+ - Find .. works (dispQuery)
+
+ver. 0.22.. Dec.12, 2005
+ - added "Back" to caps-mode
+ - init filename for new file 
+ - square printed as Rect, 
+ - ttf vs. Standard font switchable
+
+ver. 0.21.. Dec.10, 2005
+ - printing in dispText corrected by removing "%s" (see forum on Luaplayer 0.15)
+ - browser : oldPad added, so it is no more so sensitive
+ - ttf.. first trial -> really slow (see forum on Luaplayer 0.15)
+ - Battery status in % added
+
+ver. 0.20.. Dec.3, 2005
+ - PgDwn fixed, 5xDown fixed,
+ - Back and Del fully functional
+ - Save works!!!
+
+ver. 0.19.. Dec.1, 2005
+ - 5x jump Up/Dwn/R/L added
+ - Jump up to prev line, and move everything up if Back reaches the beg of the actual line
+
+Ver. 0.17.. Nov 28, 2005
+ - cursor movement, cursor displaying
+ - text scrolling by cursor movement
+ - added Cursor mode to keyboard modes
+ - PgUp/Down works also in Type mode
+
+Ver. 0.15.. Nov 26, 2005
+ - functions like drawRect, getTimeStr, drawKeyboard .. moved to a separate file
+ - File Browser added  (LUA FileBrowser 0.1 by mikehaggar99(at)gmail(dot)com)
+ - Text display functions based on textBrowser added
+ - PgUp/Down work in type mode
+ - Editing still does NOT!
+
+Ver. 0.12.. Nov 2, 2005
+ - Tab now adds five spaces to 'text'
+ - Xprt (LineExport) exports the note we just wrote to a file 
+   named acc. to the date and time of saving
+ - Prnt (PrintScreen) stores a png in the same way as Xprt
+
+Ver. 0.11.. Nov 2, 2005
+ - Menu items added 
+ - Buttons made smaller
+ - Problem with Escape sequences (NewLine, Tab, Esc)
+
+Ver. 0.1 .. Nov 1, 2005
+ - qwertz + QWERTZ + Nums + Chars
+ - works nicely, concept suitable for dictionaries
+
+
